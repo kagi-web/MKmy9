@@ -136,15 +136,3 @@ previewBtn.onclick = () => {
   // スクロールも可
     shareArea.scrollIntoView({behavior:"smooth", block:"end"});
 };
-
-
-document.getElementById("twitterBtn").onclick = () => {
-
-  const text = "マリオカート8DX・ワールド私の推しコース9選 #私の推しコース9選 #マリオカート8DX #マリオカートワールド";
-  const url = location.href;
-
-  const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-
-  // 新しいウィンドウで開く
-  window.open(shareUrl, "_blank");
-};

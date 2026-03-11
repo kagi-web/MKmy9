@@ -3,7 +3,9 @@ font-family:sans-serif;
 padding:20px;
 background:#f5f6fa;
 }
-
+a{
+    text-decoration: none;
+}
 h2{
     text-align: center;
 }
