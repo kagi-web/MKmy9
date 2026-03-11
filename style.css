@@ -80,7 +80,6 @@ font-weight:bold;
 cursor:pointer;
 }
 .remove:hover{
-background-color: red;
 border: 1px solid #ffffff;
 }
 
