@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="あなたのマリオカートの好きなコースをシェアしよう">
+    <meta property="og:title" content="マリオカート8DX・ワールド私の推しコース9選">
+    <meta property="og:description" content="あなたの好きなマリオカートのコースをシェアしよう">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="マリオカート8DX・ワールド私の推しコース9選">
+    <meta name="twitter:description" content="あなたの好きなマリオカートのコースをシェアしよう">
+    <title>マリオカート8DX・ワールド私の推しコース9選</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<h2>マリオカート8DX・ワールド<br>
+    私の推しコース9選</h2>
+
+<div class="container">
+    <div class="grid" id="grid">
+
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+
+    </div>
+</div>
+
+<div class="generateArea">
+    <button id="generateBtn" href="#imagePreview">画像生成と共有</button>
+</div>
+
+<div id="shareArea">
+
+  <div id="imagePreview"></div>
+
+  <div class="shareButtons">
+    <button id="saveBtn">画像を保存</button>
+    <button id="twitterBtn">Xで共有</button>
+  </div>
+
+</div>
+
+
+<!-- 検索モーダル -->
+<div id="modal" class="modal">
+
+<div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title">検索する</div>
+      <button class="closeBtn" onclick="closeModal()">×</button>
+    </div>
+
+    <div class="searchArea">
+      <input id="search" placeholder="コース名">
+    </div>
+
+<div id="suggestions"></div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
