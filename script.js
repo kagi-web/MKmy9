@@ -55,7 +55,7 @@ return fullName.includes(word);
 
 
 })
-.slice(0,6);
+.slice(0,8);
 
 const suggestions = document.getElementById("suggestions");
 
@@ -114,65 +114,37 @@ closeModal();
 
 }
 
-// 画像保存と共有
-const generateBtn=document.getElementById("generateBtn");
-const shareArea=document.getElementById("shareArea");
-const preview=document.getElementById("imagePreview");
+const previewBtn = document.getElementById("previewBtn");
+const editGrid = document.getElementById("grid");
+const previewGrid = document.getElementById("previewGrid");
+const shareArea = document.getElementById("shareArea");
+const previewTitle = document.getElementById("previewTitle");
 
-let generatedImage="";
+previewBtn.onclick = () => {
+  previewGrid.innerHTML = ""; // 前の内容クリア
 
-generateBtn.onclick=()=>{
+  editGrid.querySelectorAll(".cell").forEach(cell => {
+    const clone = cell.cloneNode(true);
+    previewGrid.appendChild(clone);
 
-const grid=document.getElementById("grid");
+  });
 
+    previewGrid.style.display = "grid";
+    shareArea.style.display = "block";
+    previewTitle.style.display = "block";
 
-html2canvas(grid).then(canvas=>{
-
-generatedImage=canvas.toDataURL("image/png");
-
-preview.innerHTML=`<img src="${generatedImage}">`;
-
-shareArea.style.display="block";
-
-/* 画像へスクロール */
-const img = preview.querySelector("img");
-
-img.onload = () => {
-
-document.getElementById("saveBtn").scrollIntoView({
-behavior:"smooth",
-block:"end"
-});
-
+  // スクロールも可
+    shareArea.scrollIntoView({behavior:"smooth", block:"end"});
 };
 
-});
 
-};
+document.getElementById("twitterBtn").onclick = () => {
 
-document.getElementById("saveBtn").onclick=()=>{
+  const text = "マリオカート8DX・ワールド私の推しコース9選 #私の推しコース9選 #マリオカート8DX #マリオカートワールド";
+  const url = location.href;
 
-if(!generatedImage)return;
+  const shareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
 
-const link=document.createElement("a");
-
-link.href=generatedImage;
-
-link.download="my9card.png";
-
-link.click();
-
-};
-
-document.getElementById("twitterBtn").onclick=()=>{
-
-const text="マリオカート8DX・ワールド私の推しコース9選 #私の推しコース9選 #マリオカート8DX #マリオカートワールド";
-
-const url=location.href;
-
-const shareUrl=
-`https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-
-window.open(shareUrl,"_blank");
-
+  // 新しいウィンドウで開く
+  window.open(shareUrl, "_blank");
 };

@@ -41,7 +41,6 @@ justify-content:center;
 cursor:pointer;
 position:relative;
 transition:transform 0.15s, box-shadow 0.15s;
-cursor:pointer;
 border: 1px solid #d8d8d8;
 }
 
@@ -70,8 +69,8 @@ border-radius:12px;
 position:absolute;
 top:1px;
 right:3px;
-width:24px;
-height:24px;
+width:27px;
+height:27px;
 border:none;
 border-radius:50%;
 background: rgba(0,0,0,0.45);
@@ -82,6 +81,7 @@ cursor:pointer;
 .remove:hover{
 border: 1px solid #ffffff;
 }
+
 
 .modal{
 display:none;
@@ -150,7 +150,10 @@ border-radius:8px;
 border:1px solid #ddd;
 font-size:14px;
 }
-
+#suggestions{
+    max-height:200px;
+    overflow-y:auto;   
+}
 .suggestion{
 display:flex;
 align-items:center;
@@ -158,7 +161,6 @@ gap:10px;
 cursor:pointer;
 padding:8px 10px;
 border-radius:8px;
-
 }
 
 .suggestion img{
@@ -188,7 +190,26 @@ font-size:13px;
 font-weight:bold;
 }
 
-#generateBtn{
+#previewTitle{
+    display: none;
+   padding: 20px 0 10px 0;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight:700;
+    margin: 0;
+}
+
+#previewGrid {
+   pointer-events:none;
+   
+}
+#previewGrid .remove {
+   display: none;
+}
+
+.previewbutton{
+    text-align: center;
+}
+#previewBtn{
     border-radius:8px;
     background:#444;
     color:white;
@@ -199,86 +220,33 @@ font-weight:bold;
     margin-top: 10px;
     margin-bottom: 30px;
 }
-#generateBtn:hover{
-    transform:translateY(-3px);
-box-shadow:0 8px 18px rgba(0,0,0,0.12);
-border: 1px solid #7e7e7e;
+
+#previewBtn:hover{
+    opacity: 0.8;
 }
-.generateArea{
-text-align:center;
+
+#previewGrid{
+    display: none;
 }
 
 #shareArea{
-
 display:none;
-
 text-align:center;
-
-margin-top:30px;
-margin-bottom: 50px;
-
-}
-
-#imagePreview {
-    max-width:600px;
-    margin: 0 auto;
-}
-
-#imagePreview img{
-width: 100%;
-height: 100%;
-border-radius:12px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-
-}
-
-.shareButtons{
-
-margin-top:15px;
-
-display:flex;
-
-justify-content:center;
-
-gap:10px;
-
-}
-
-.shareButtons button{
-
-padding:10px 16px;
-
-border:none;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-size:14px;
-
-}
-
-#saveBtn{
-background:#444;
-color:white;
-}
-
-#saveBtn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 18px rgba(0,0,0,0.12);
-border: 1px solid #7e7e7e;
+margin: 50px 0;
 }
 
 #twitterBtn{
+padding:10px 16px;
+border:none;
+border-radius:8px;
+font-size:14px;
 background:#1DA1F2;
 color:white;
+cursor:pointer;
 }
 
 #twitterBtn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 18px rgba(0,0,0,0.12);
-border: 1px solid #004d9f;
+opacity: 0.8;
 }
 /* スマホ */
 @media (max-width:600px){

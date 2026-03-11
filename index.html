@@ -11,6 +11,7 @@
     <meta name="twitter:description" content="あなたの好きなマリオカートのコースをシェアしよう">
     <title>マリオカート8DX・ワールド私の推しコース9選</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 
@@ -20,7 +21,7 @@
     私の推しコース9選</h2>
 
 <div class="container">
-    <div class="grid" id="grid">
+    <div  class="grid" id="grid">
 
     <div class="cell"><div class="plus">+</div></div>
     <div class="cell"><div class="plus">+</div></div>
@@ -37,20 +38,36 @@
     </div>
 </div>
 
-<div class="generateArea">
-    <button id="generateBtn" href="#imagePreview">画像生成と共有</button>
+
+
+<div class="previewbutton">
+  <button id="previewBtn">プレビューとシェア</button>
 </div>
 
-<div id="shareArea">
+<div class="container">
+  <h2 id="previewTitle">私の推しコース9選</h2>
+  <div id="previewGrid" class="grid">
+    <!-- 最初は空、ボタン押したら可視化 -->
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
 
-  <div id="imagePreview"></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
 
-  <div class="shareButtons">
-    <button id="saveBtn">画像を保存</button>
-    <button id="twitterBtn">Xで共有</button>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+    <div class="cell"><div class="plus">+</div></div>
+
   </div>
 
 </div>
+
+<div id="shareArea">
+    <button id="twitterBtn">Xでシェア</button>
+</div>
+
 
 
 <!-- 検索モーダル -->
