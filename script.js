@@ -137,6 +137,3 @@ previewBtn.onclick = () => {
     shareArea.scrollIntoView({behavior:"smooth", block:"end"});
 };
 
-if (location.pathname.endsWith("/share")) {
-  location.replace(location.pathname.replace("/share", "/"));
-}
