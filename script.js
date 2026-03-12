@@ -136,7 +136,3 @@ previewBtn.onclick = () => {
   // スクロールも可
     shareArea.scrollIntoView({behavior:"smooth", block:"end"});
 };
-
-if (location.search === "?s") {
-  location.replace(location.pathname);
-}
